@@ -3277,9 +3277,9 @@ var Backbone = Backbone || {};
 
       var last = arguments[l - 1];
       var path = new Two.Path(points, !(_.isBoolean(last) ? last : undefined));
-      var rect = path.getBoundingClientRect();
-      path.center().translation
-        .set(rect.left + rect.width / 2, rect.top + rect.height / 2);
+      //var rect = path.getBoundingClientRect();
+      //path.center().translation
+      //  .set(rect.left + rect.width / 2, rect.top + rect.height / 2);
 
       this.scene.add(path);
 
@@ -7001,7 +7001,7 @@ var Backbone = Backbone || {};
 
       this._flagVertices =  this._flagFill =  this._flagStroke =
          this._flagLinewidth = this._flagOpacity = this._flagVisible =
-         this._flagCap = this._flagJoin = this._flagMiter = 
+         this._flagCap = this._flagJoin = this._flagMiter =
          this._flagClip = false;
 
       Two.Shape.prototype.flagReset.call(this);
@@ -7343,7 +7343,7 @@ var Backbone = Backbone || {};
     var theta = PI, x, y, lx, ly, rx, ry;
 
     points.push(
-      new Two.Anchor( 
+      new Two.Anchor(
         sin(theta) * (r + (amplitude/2)),
         cos(theta) * (r + (amplitude/2)),
         0,0,0,0,

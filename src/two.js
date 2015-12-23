@@ -1804,9 +1804,10 @@
 
       var last = arguments[l - 1];
       var path = new Two.Path(points, !(_.isBoolean(last) ? last : undefined));
-      var rect = path.getBoundingClientRect();
-      path.center().translation
-        .set(rect.left + rect.width / 2, rect.top + rect.height / 2);
+      // disabled centering
+      //var rect = path.getBoundingClientRect();
+      //path.center().translation
+      //  .set(rect.left + rect.width / 2, rect.top + rect.height / 2);
 
       this.scene.add(path);
 
